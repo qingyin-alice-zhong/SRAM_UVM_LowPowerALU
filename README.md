@@ -1,5 +1,3 @@
-# SRAM UVM LowPower AHB Verification
-
 ## Overview
 
 - DUT: AHB-Lite style `32x32` SRAM with byte/halfword/word accesses.
@@ -11,14 +9,11 @@
 - `rtl/`: DUT RTL
 - `tb/`: interface, UVM package, `tb_top`, and SVA
 - `sim/`: compile/run/regression scripts and regression list
-- `task.md`: task checklist and milestone status
 - `note.md`: low-power verification requirements and pass criteria
-- `chisel-memory-lower-master/`: reference folder (not part of the main verification project)
+
 
 ## Prerequisites
 
-- Questa/ModelSim available in `PATH` (`vlib`, `vlog`, `vsim`)
-- UVM path configured:
 
 ```powershell
 $env:UVM_HOME='C:\questasim\verilog_src\uvm-1.2'
@@ -53,4 +48,4 @@ cd sim
 - `low_power_sleep_blocks_write_test`
 - `low_power_sleep_pipeline_interrupt_test`
 
-Logs are generated in `sim/logs/`.
+
