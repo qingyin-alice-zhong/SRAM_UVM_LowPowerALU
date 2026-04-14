@@ -1,0 +1,16 @@
+__pycache__
+venv/
+*.prj
+*.sh
+xsim.*
+xelab.*
+*.jou
+*.log
+*.wdb
+*.vcd
+*_tb.v
+csrc/
+simv
+simv.daidir
+ucli.key
+rf2_*.v

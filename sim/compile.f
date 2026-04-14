@@ -1,0 +1,11 @@
++incdir+$UVM_HOME/src
++$UVM_HOME/src/uvm_pkg.sv
++
+++incdir+../tb
+++incdir+../tb/uvm
++
++../rtl/ahb_sram_32x32.sv
++../tb/ahb_if.sv
+../tb/ahb_sva.sv
++../tb/uvm/ahb_uvm_pkg.sv
++../tb/tb_top.sv

@@ -1,0 +1,80 @@
+# https://github.com/vortexgpgpu/vortex/blob/master/hw/syn/synopsys/models/memory/cln28hpm/rf2_32x128_wm1/rf2_32x128_wm1.v
+ip:
+- name: rf2_32x128_wm1
+  cost: 8780 # cell area
+  width: 128
+  depth: 32
+  type: 1r1w_masked
+  constants:
+    COLLDISN: 1'b1
+    DFTRAMBYP: 1'b0
+    EMAA: 3'd3
+    EMAB: 3'd3
+    EMASA: 1'b0
+    RET1N: 1'b1
+    SEA: 1'b0
+    SEB: 1'b0
+    SIA: 2'b0
+    SIB: 2'b0
+    TAA: 5'b0
+    TAB: 5'b0
+    TCENA: 1'b0
+    TCENB: 1'b0
+    TDB: "128'b0"
+    TENA: 1'b1
+    TENB: 1'b1
+    TWENB: "{128{1'b1}}"
+  ports: &1r1w_mask
+    - type: r
+      addr: AA
+      clock: CLKA
+      enable_n: CENA
+      data: QA
+    - type: w
+      addr: AB
+      clock: CLKB
+      enable_n: CENB
+      data: DB
+      mask_n: WENB
+# https://github.com/vortexgpgpu/vortex/blob/master/hw/syn/synopsys/models/memory/cln28hpm/rf2_32x19_wm0/rf2_32x19_wm0.v
+- name: rf2_32x19_wm0
+  cost: 2136 # cell area
+  width: 19
+  depth: 32
+  type: 1r1w
+  constants:
+    COLLDISN: 1'b1
+    DFTRAMBYP: 1'b0
+    EMAA: 3'd3
+    EMAB: 3'd3
+    EMASA: 1'b0
+    RET1N: 1'b1
+    SEA: 1'b0
+    SEB: 1'b0
+    SIA: 2'b0
+    SIB: 2'b0
+    TAA: 5'b0
+    TAB: 5'b0
+    TCENA: 1'b0
+    TCENB: 1'b0
+    TDB: "19'b0"
+    TENA: 1'b1
+    TENB: 1'b1
+  ports: &1r1w
+    - type: r
+      addr: AA
+      clock: CLKA
+      enable_n: CENA
+      data: QA
+    - type: w
+      addr: AB
+      clock: CLKB
+      enable_n: CENB
+      data: DB
+# https://github.com/vortexgpgpu/vortex/blob/master/hw/syn/synopsys/models/memory/cln28hpm/rf2_256x19_wm0/rf2_256x19_wm0.v
+- name: rf2_256x19_wm0
+  cost: 5188 # cell area
+  width: 19
+  depth: 256
+  type: 1r1w
+  ports: *1r1w

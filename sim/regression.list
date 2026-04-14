@@ -1,0 +1,10 @@
+smoke_test
+addr_sweep_test
+subword_access_test
+unaligned_access_test
+pipeline_burst_test
+reset_init_test
+random_regression_test
+low_power_sleep_entry_test
+low_power_sleep_blocks_write_test
+low_power_sleep_pipeline_interrupt_test
